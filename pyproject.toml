@@ -32,6 +32,10 @@ dynamic = ["version"]
 homepage = "https://github.com/aiortc/pylsqpack"
 documentation = "https://pylsqpack.readthedocs.io/"
 
+[tool.cibuildwheel]
+free-threaded-support = true
+test-command = "python -m unittest discover -s {project}/tests"
+
 [tool.mypy]
 files = ["src", "tests"]
 strict = true
